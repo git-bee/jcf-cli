@@ -37,7 +37,7 @@ unit Converter;
 interface
 
 uses
-  { delphi } SysUtils, Controls, //Forms,
+  { delphi } SysUtils, //Controls, Forms,
   { local } ConvertTypes, ParseTreeNode,
   BuildTokenList,
   BuildParseTree, BaseVisitor;
