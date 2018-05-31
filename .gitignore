@@ -1,0 +1,10 @@
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.compiled
+*.lps
+*.bak
+*.ppu
+*.o
