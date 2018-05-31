@@ -15,7 +15,7 @@ I took [Jedi Code Formatter](http://jedicodeformat.sourceforge.net/) (JCF) from 
 
 Alternatively, you may also compile the JCF project using Visual Studio Code using just [Free Pascal](https://freepascal.org) compiler (no Lazarus IDE is required). However, since FPC doesn't read `.lpi` project file, you must compile the `JCF.lpr` main program instead. Make sure you supply all the required compiler parameters correctly, especially the `-Fi`, `-Fu` and `-FE` options.
 
-> Note: For Mac users, I've included the executable file in this repo so you don't need to build it yourself.
+> Note: For Mac and Linux users, I've included the executable file in [`Output/Lazarus`](https://github.com/git-bee/jcf-cli/tree/master/Output/Lazarus) folder so you don't need to build it yourself. Sorry, Windows users. 😊
 
 ## How To Use JCF in VS Code
 
