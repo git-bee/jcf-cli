@@ -26,9 +26,8 @@ See http://www.gnu.org/licenses/gpl.html
 {*)}
 
 { FPC complete options to compile this project from command line (terminal):
-  //! USE ppc386 INSTEAD OF fpc COMMAND OR THE EXECUTABLE WILL CRASH!
-  ppc386 JCF.lpr -Mobjfpc -Scghi -Px86_64 -B -CX -O3 -XXs -v
-  -Fi../../Include -Fu../../lazutils -FU../../Output/ -FE../../Output/
+  fpc JCF.lpr -Mobjfpc -Scghi -Px86_64 -B -CX -O3 -XXs -v
+  -Fi../../Include -Fu../../lazutils -FU../../Output -FE../../Output
 }
   {$I JcfGlobal.inc}
 uses
