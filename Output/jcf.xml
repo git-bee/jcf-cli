@@ -82,7 +82,7 @@
       <LabelBegin> 1 </LabelBegin>
       <CaseLabel> 1 </CaseLabel>
       <CaseBegin> 1 </CaseBegin>
-      <CaseElse> 0 </CaseElse>
+      <CaseElse> 2 </CaseElse>
       <CaseElseBegin> 0 </CaseElseBegin>
       <EndElse> 0 </EndElse>
       <ElseIf> 1 </ElseIf>

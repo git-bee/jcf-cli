@@ -1,0 +1,100 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    { // shortcut: cmd+shift+B (run build task)
+      "label"  : "JCF: Build Release",
+      "type"   : "shell",
+      "group"  : {
+        "kind"     : "build",
+        "isDefault": true,
+      },
+      "options": {
+        "cwd"  : "CommandLine/Lazarus",
+      },
+      "command": "fpc",
+      "args"   : [
+        "JCF.lpr",            // source code file
+        "-Px86_64",           // target platform 64-bit
+        "-Mobjfpc",           // object pascal mode
+        "-Schi",              // pascal syntax setting
+        "-CX",                // generated code setting
+        "-O3",                // code optimization setting
+        "-XXs",               // executable setting
+        "-B",                 // always build all
+        "-v",                 // verbose message
+        "-Fi../../Include",   // include file path
+        "-Fu../../lazutils",  // unit file path
+        "-FU../../Output",    // unit output path
+        "-FE../../Output",    // executable output path
+      ],
+      "problemMatcher": []
+    },
+    { // shortcut: cmd+shift+R (run test task)
+      "label": "JCF: Test CLI Program",
+      "type" : "shell",
+      "group": {
+        "kind"     : "test",
+        "isDefault": true,
+      },
+      "command": "Output/JCF",
+      "args"   : [
+        "test.pas",
+        "-clarify",
+        "-inplace",
+        "-config=Output/jcf.xml"
+      ],
+      "presentation": {
+        // open test.pas file to see the result
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    { // shortcut: none
+      "label"  : "JCF: Clean Files",
+      "type"   : "shell",
+      "command": "rm",
+      "options": {
+        "cwd"  : "Output",
+      },
+      "args"   : [
+        // "JCF",    // executable file
+        "*.a",    // generated linker file
+        "*.o",    // generated object file
+        "*.s",    // generated assembler file
+        "*.out",  // generated formatted code
+        "*.ppu",  // generated unit file
+        "*.res",  // generated resource file
+        "*.rsj",  // generated resource file
+        "*.sh",   // generated script code
+      ],
+      "problemMatcher": []
+    },
+    { // shortcut: none
+      "label"  : "JCF: Open CLI Project",
+      "type"   : "shell",
+      "command": "code",
+      "args"   : [
+        "CommandLine/Lazarus/JCF.lpr",
+      ],
+      "presentation": {
+        "reveal"    : "never"
+      },
+      "problemMatcher": []
+    },
+    { // shortcut: none
+      "label"  : "JCF: Deploy Executable",
+      "type"   : "shell",
+      "command": "mv",
+      "args"   : [
+        "Output/JCF",
+        "~/Documents/pascal/jcf",
+      ],
+      "presentation": {
+        "reveal"    : "silent"
+      },
+      "problemMatcher": []
+    },
+  ],
+}

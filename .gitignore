@@ -1,10 +1,14 @@
 # OS or Editor folders
-.DS_Store
 ._*
-Thumbs.db
 .cache
 .compiled
-*.lps
+.DS_Store
 *.bak
+*.lps
 *.ppu
 *.o
+Output/*.rsj
+Output/*.res
+Output/*.sh
+Output/JCF
+Thumbs.db
