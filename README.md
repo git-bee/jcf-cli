@@ -4,7 +4,7 @@ I took [Jedi Code Formatter](http://jedicodeformat.sourceforge.net/) (JCF) from 
 
 ## How To Build Using Lazarus
 
-1. You must have [Lazarus IDE](https://lazarus-ide.org) already installed on your system.
+1. You must have [Lazarus IDE](http://lazarus-ide.org) already installed on your system.
 2. Clone or download this `jcf-cli` GitHub repo into your own folder.
 3. Start your Lazarus IDE and open `jcf.lpi` project within `jcf-cli/CommandLine/Lazarus` folder.
 4. Build it via Lazarus' **Run** → **Build** menu.
@@ -14,9 +14,9 @@ I took [Jedi Code Formatter](http://jedicodeformat.sourceforge.net/) (JCF) from 
 
 ## How To Build Using VS Code
 
-1. You must have [VS Code](https://code.visualstudio.com) already installed on your system.
+1. You must have both [Free Pascal](http://freepascal.org) compiler and [VS Code](https://code.visualstudio.com) already installed on your system.
 2. Clone or download this `jcf-cli` GitHub repo into your own folder.
-3. Start your VS Code and open `jcf.lpr` project within `jcf-cli/CommandLine/Lazarus` folder. Or you could use the provided **JCF: Open CLI Project** from the **Tasks** menu.
+3. Start your VS Code and open `jcf.lpr` project within `jcf-cli/CommandLine/Lazarus` folder.
 4. Build it via VS Code's **Tasks** → **Run Task...** → **JCF: Build Release** menu.
 5. Wait while FPC is building the JCF project.
 6. Open `test.pas` file from `jcf-cli` folder.
