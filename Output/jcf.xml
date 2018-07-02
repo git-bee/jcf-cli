@@ -80,8 +80,8 @@
       <BlockBegin> 0 </BlockBegin>
       <Label> 1 </Label>
       <LabelBegin> 1 </LabelBegin>
-      <CaseLabel> 1 </CaseLabel>
-      <CaseBegin> 1 </CaseBegin>
+      <CaseLabel> 2 </CaseLabel>
+      <CaseBegin> 0 </CaseBegin>
       <CaseElse> 2 </CaseElse>
       <CaseElseBegin> 0 </CaseElseBegin>
       <EndElse> 0 </EndElse>
