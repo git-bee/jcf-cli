@@ -2,24 +2,31 @@
 
 I took [Jedi Code Formatter](http://jedicodeformat.sourceforge.net/) (JCF) from [Lazarus IDE repository](https://github.com/graemeg/lazarus/tree/upstream/components/jcf2) and made it as CLI (command line interface) version by removing all the GUI (graphical user interface) parts from the original GUI version. The CLI version can be used as Pascal code formatter in [Visual Studio Code](https://code.visualstudio.com/), or as backend engine of an online [Pascal code beautifier](https://pak.lebah.web.id/jcf).
 
-## How To Build
+## How To Build Using Lazarus
 
 1. You must have [Lazarus IDE](https://lazarus-ide.org) already installed on your system.
-2. Start your Lazarus IDE and open `jcf.lpi` project within `CommandLine/Lazarus` folder.
-3. Build it via Lazarus' **Run** → **Build** menu.
-4. Wait while Lazarus is building the JCF project.
-5. Take the executable `JCF` file from `Output/Lazarus` folder along with the `jcf.xml` configuration file.
-6. Just to make sure, test it from Terminal using `./JCF -?` command. It should show the usage manual.
+2. Clone or download this `jcf-cli` GitHub repo into your own folder.
+3. Start your Lazarus IDE and open `jcf.lpi` project within `jcf-cli/CommandLine/Lazarus` folder.
+4. Build it via Lazarus' **Run** → **Build** menu.
+5. Wait while Lazarus is building the JCF project.
+6. Take the executable `JCF` file from `jcf-cli/Output/Lazarus` folder along with the `jcf.xml` configuration file.
+7. Just to make sure, test it from Terminal using `./JCF -?` command. It should show the usage manual.
 
-> Note: Just for your convenience, I suggest you to rename the executable file name into `jcf` (lowercased).
+## How To Build Using VS Code
 
-Alternatively, you may also compile the JCF project using Visual Studio Code using just [Free Pascal](https://freepascal.org) compiler (no Lazarus IDE is required). However, since FPC doesn't read `.lpi` project file, you must compile the `JCF.lpr` main program instead. Make sure you supply all the required compiler parameters correctly, especially the `-Fi`, `-Fu` and `-FE` options (check out the compilation note).
+1. You must have [VS Code](https://code.visualstudio.com) already installed on your system.
+2. Clone or download this `jcf-cli` GitHub repo into your own folder.
+3. Start your VS Code and open `jcf.lpr` project within `jcf-cli/CommandLine/Lazarus` folder. Or you could use the provided **JCF: Open CLI Project** from the **Tasks** menu.
+4. Build it via VS Code's **Tasks** → **Run Task...** → **JCF: Build Release** menu.
+5. Wait while FPC is building the JCF project.
+6. Open `test.pas` file from `jcf-cli` folder.
+7. Test `JCF` program using **Tasks** → **Run Task...** → **JCF: Test CLI Program** menu and you should see the result in the `test.pas` file.
 
 > Note: I've included the executable file for Linux, Mac, and Windows in [`Output/Lazarus`](Output/Lazarus) folder so you don't need to build it yourself. However, it's **not** guaranteed using the latest modification. 😊
 
 ## How To Use JCF in VS Code
 
-1. Copy the `jcf` **and** `jcf.xml` config files into your Pascal workspace folder.
+1. Copy the `JCF` **and** `jcf.xml` config files into your Pascal workspace folder.
 2. Create a new VS Code task or open the `tasks.json` if you already have one.
 3. Copy the task example below and paste it into your `tasks.json` file.  
 
@@ -27,11 +34,12 @@ Alternatively, you may also compile the JCF project using Visual Studio Code usi
   {
     "label"  : "fpc: Beautify Code",
     "type"   : "shell",
-    "command": "./jcf",
+    "command": "./JCF",
     "args": [
       "${file}",
       "-clarify",
       "-inplace",
+      "-config=jcf.xml"
     ],
     "presentation": {
       "reveal": "never"
