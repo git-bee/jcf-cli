@@ -32,7 +32,7 @@ I took [Jedi Code Formatter](http://jedicodeformat.sourceforge.net/) (JCF) from 
 
   ```json
   {
-    "label"  : "fpc: Beautify Code",
+    "label"  : "JCF: Beautify Code",
     "type"   : "shell",
     "command": "./JCF",
     "args": [
