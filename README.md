@@ -69,6 +69,6 @@ Here's JCF CLI in action within VS Code (with [OmniPascal](http://www.omnipascal
 
 ![](jcf_vscode.gif)
 
-> Note: If you're also interested in my other tasks shown in the demo, see my gist about it [here](https://gist.github.com/pakLebah/dab98067e9a388a3a8d2f5c0b44a7d3f).
+> **Note:** If you're also interested in my other tasks shown in the demo, see my gist about it [here](https://gist.github.com/pakLebah/dab98067e9a388a3a8d2f5c0b44a7d3f).
 
 Hope it's gonna be useful to other Pascal fellows out there. Have fun! 😊
