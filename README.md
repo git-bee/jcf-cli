@@ -51,6 +51,18 @@ I took [Jedi Code Formatter](http://jedicodeformat.sourceforge.net/) (JCF) from 
 5. If you need a task to obfuscate code, simply make another task using the code above, but then change `-clarify` arg into `-obfuscate`.
 6. Save your `tasks.json`. Now you should have new JCF's tasks in your tasks list.
 
+## The Problem With JCF
+
+Although JCF is a good Pascal code formatter, it has one single problem that quite annoying. JCF requires the code must be compilable which means it has to be a complete program and syntactically correct. JCF will fail on code snippets or wrong code. To make it works on code snippet, it must be put between a `begin..end` pair and has a correct `program` header, like this:
+
+```pascal
+program test;
+
+begin
+  // put code snippet here
+end.
+```
+
 ## Demo
 
 Here's JCF CLI in action within VS Code (with [OmniPascal](http://www.omnipascal.com/)):
