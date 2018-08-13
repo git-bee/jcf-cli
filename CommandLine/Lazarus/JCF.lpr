@@ -1,6 +1,5 @@
 program JCF;
 
-{(*}
 (*------------------------------------------------------------------------------
  Delphi Code formatter source code
 
@@ -23,12 +22,13 @@ Alternatively, the contents of this file may be used under the terms of
 the GNU General Public License Version 2 or later (the "GPL")
 See http://www.gnu.org/licenses/gpl.html
 ------------------------------------------------------------------------------*)
-{*)}
 
-{ FPC complete options to compile this project from command line (terminal):
+{
+  FPC complete options to compile this project from command line (terminal):
   fpc JCF.lpr -Mobjfpc -Scghi -Px86_64 -B -CX -O3 -XXs -v
   -Fi../../Include -Fu../../lazutils -FU../../Output -FE../../Output
 }
+
   {$I JcfGlobal.inc}
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
