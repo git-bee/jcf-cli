@@ -2,6 +2,7 @@
 ._*
 .cache
 .compiled
+.gitignore
 .DS_Store
 *.bak
 *.lps
